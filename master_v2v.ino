@@ -28,7 +28,6 @@ void loop()
   {
     t = Serial.read();
     Serial.println(t);
-    sendit(t);
     switch(t)
     {
       case 'F': //move forward
@@ -63,6 +62,7 @@ void loop()
                 digitalWrite(lmb,LOW);
                 break;
     }
+   sendit(t);
   }
   else
   {
